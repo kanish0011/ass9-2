@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Bookstore Portal</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: #f7fafc; color: #2d3748; }
+    header { background-color: #2b6cb0; color: white; padding: 25px 20px; text-align: center; }
+    .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+    .books-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.06); border-top: 4px solid #3182ce; }
+    .category { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #718096; font-weight: bold; }
+    .title { font-size: 1.25rem; font-weight: 600; margin: 8px 0; color: #1a202c; }
+    .author { font-size: 0.95rem; color: #4a5568; margin-bottom: 12px; }
+    .price-row { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; }
+    .price { font-size: 1.3rem; font-weight: bold; color: #2b6cb0; }
+    .badge { padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: bold; }
+    .in-stock { background-color: #c6f6d5; color: #22543d; }
+    .low-stock { background-color: #feebc8; color: #744210; }
+    .out-stock { background-color: #fed7d7; color: #742a2a; }
+    .thank-you-banner { 
+      background-color: #ebf8ff; 
+      border: 2px dashed #3182ce; 
+      padding: 20px; 
+      border-radius: 8px; 
+      margin-top: 30px; 
+      text-align: center; 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Campus Online Bookstore</h1>
+    <p>Browse Academic Textbooks, Reference Guides & Literature</p>
+  </header>
+
+  <div class="container">
+    <div class="books-grid">
+      <!-- Bok 1 -->
+      <div class="card">
+        <span class="category">Computer Science</span>
+        <div class="title">Clean Code</div>
+        <div class="author">Robert C. Martin</div>
+        <div class="price-row">
+          <span class="price">&#8377; 650</span>
+          <span class="badge in-stock">In Stock</span>
+        </div>
+      </div>
+
+      <!-- Bok 2 -->
+      <div class="card">
+        <span class="category">Software Architecture</span>
+        <div class="title">Design Patterns (GoF)</div>
+        <div class="author">Erich Gamma et al.</div>
+        <div class="price-row">
+          <span class="price">&#8377; 820</span>
+          <span class="badge in-stock">In Stock</span>
+        </div>
+      </div>
+
+      <!-- Bok 3 -->
+      <div class="card">
+        <span class="category">DevOps & Cloud</span>
+        <div class="title">The Phoenix Project</div>
+        <div class="author">Gene Kim, Kevin Behr</div>
+        <div class="price-row">
+          <span class="price">&#8377; 490</span>
+          <span class="badge low-stock">Only 2 Left</span>
+        </div>
+      </div>
+
+      <!-- Bok 4 -->
+      <div class="card">
+        <span class="category">Algorithms</span>
+        <div class="title">Introduction to Algorithms</div>
+        <div class="author">Thomas H. Cormen</div>
+        <div class="price-row">
+          <span class="price">&#8377; 1,250</span>
+          <span class="badge in-stock">In Stock</span>
+        </div>
+      </div>
+
+      <!-- Bok 5 -->
+      <div class="card">
+        <span class="category">Distributed Systems</span>
+        <div class="title">Designing Data-Intensive Apps</div>
+        <div class="author">Martin Kleppmann</div>
+        <div class="price-row">
+          <span class="price">&#8377; 980</span>
+          <span class="badge in-stock">In Stock</span>
+        </div>
+      </div>
+
+      <!-- Bok 6 -->
+      <div class="card">
+        <span class="category">Cybersecurity</span>
+        <div class="title">The Web Application Hacker's Handbook</div>
+        <div class="author">Dafydd Stuttard</div>
+        <div class="price-row">
+          <span class="price">&#8377; 740</span>
+          <span class="badge out-stock">Out of Stock</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ny funksjon: Takkemelding plassert utenfor bøkene i full bredde -->
+    <div class="thank-you-banner">
+      <h3 style="color: #2b6cb0;">Thank You for Shopping with Us!</h3>
+      <p style="margin-top: 5px; color: #4a5568;">All academic textbook orders include free campus delivery within 24 hours.</p>
+    </div>
+  </div>
+</body>
+</html>
